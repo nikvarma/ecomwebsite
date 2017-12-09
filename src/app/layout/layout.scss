@@ -1,0 +1,298 @@
+$font-fontawsome: normal normal normal 14px/1 FontAwesome;
+.ecom-nav {
+    &.ecom-nav-bar {
+        &.ecom-nav-bar-fixed {
+            position: fixed;
+            width: 100%;
+            background-color: white;
+            z-index: 2;
+            top: 0px;
+            right: 0px;
+            left: 0px;
+            box-shadow: 2px 2px 4px rgba(0,0,0,.2);
+        }
+        .top-nav-bar {
+            line-height: 25.5px;
+            padding: 2px 30px;
+            background-color: #C51162;
+            ul li {
+                display: inline-block;
+                a {
+                    text-decoration: none;
+                    color: white;
+                }
+            }
+            .top-usefull-links li a {
+                font-size: 11px;
+                padding: 0px 10px;
+            }
+        }
+        .ecom-search-control {
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            input {
+                //min-width: 100%;
+                width: inherit;
+                padding: 5px 10px;
+                line-height: 27px;
+                border: 0px;
+                height: 37px;
+                border-radius: 3px 3px;
+                font-size: 11px;
+            }
+            .search-results {
+                display: none;
+                position: absolute;
+                box-shadow: 2px 2px 10px 0px #e0e0e0;
+                z-index: 1;
+                background-color: white;
+                font-size: 12px;
+                & > div {
+                    float: left;
+                    text-decoration: underline;
+                    padding: 0px 10px;
+                }
+            }
+            .ecom-search-btn {
+                border: 0px;
+                padding: 5px 18px;
+                line-height: 27px;
+                position: relative;
+                left: -47px;
+                font-size:  11px;
+                cursor: pointer;
+                border-radius: 0px 5px 5px 0px;
+                background-color: #c6c6c6;
+                color: #444;
+                transition: all 1s;
+                &:hover {
+                    background-color: #444;
+                    color: white;
+                }
+            }
+        }
+        .section-control {
+            position: relative;
+            & > div {
+                display:inline-block;
+                color: white;
+                &.cart-control, &.login-control {
+                    // margin: 0px 15px;
+                    padding: 0px 25px; //10px
+                    border-left: 1px solid #d42674;
+                    cursor: pointer;
+                    transition: all 1s;
+                    &.login-control {
+                        margin-right: -4px;
+                    }
+                    &:hover {
+                        background-color: #444;
+                    }
+                    i {
+                        font-size: 1.5em;
+                        position: relative;
+                        top: 5px;
+                        left: 5px;//15px
+                    }
+                }
+            }
+        }
+        .ecom-nav-bar-header {
+            line-height: 55px;
+            padding: 0px 30px; //55
+            background-color: #E91E63;
+            .ecom-nav-logo a {
+                text-decoration: none;
+                color: white;
+                font-size: 18px;
+            }
+        }
+    }
+}
+.ecom-menu-contriner {
+    margin: 5px 0px;
+}
+li a:hover {
+    color: #ff0000;
+}
+.padding-top-bottom-0 {
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+}
+.ecom-menu-list {
+    position: relative;
+    & > div {
+        display: inline-block;
+    }
+    .ecom-menu-products {
+        width: 200px;
+        padding: 0px 10px;
+        line-height: 35px;
+        background-color: #c6c6c6;
+        color: #e91e63;
+        border-radius: 3px;
+        cursor: pointer;
+        &:hover .dynamic-menu, &.active .dynamic-menu {
+            display: block;
+        }
+        &:hover i.fa-chevron-down:before, &.active i.fa-chevron-down:before {
+            content: "\f077";
+        }
+        .dynamic-menu {
+            display: none;
+            position: absolute;
+            width: auto;
+            left: 0px;
+            padding: 5px 0px;
+            & > ul {
+                z-index: 1;
+                position: relative;
+            }
+            & > ul > li {
+                display: list-item;
+                border-bottom: 1px solid white;
+                width: 200px;
+                padding: 0px 10px;
+                background-color: #e91e63;
+                color: white;
+                & span {
+                    font-size: 13px;
+                    & > i {
+                        width: 25px;
+                        height: 25px;
+                        line-height: 27px;
+                        text-align: center;
+                        text-indent: 1px;
+                        background-color: white;
+                        color: #333;
+                        border-radius: 13px 13px 13px 13px;
+                        margin: 0px 10px 0px 0px;
+                    }
+                }
+                &.active, &:hover {
+                    background-color: #444;
+                    & > span > i {
+                        background-color: #e91e63;
+                        color: white;
+                        box-shadow: 0px 0px 5px 0px #f30657;
+                    }
+                    &:after {
+                        content: "\f0a4";
+                        font: $font-fontawsome;
+                        position: relative;
+                        float: right;
+                        left: 0%;
+                        top: 10px;
+                    }
+                }
+                &:hover .dynamic-submenu {
+                    display: block;
+                }
+            }
+            ul li {
+                list-style-type: none;                
+            }
+            .dynamic-submenu {
+                display: none;
+                position: absolute;
+                top: 0px;
+                left: 200px;
+                width: auto;
+                padding: 0px 15px;
+                min-width: 100%;
+                min-height: 100%;
+                overflow: auto;
+                background-color: white;
+                .dynamic-submenu-tab {
+                    color: #333333;
+                    width: auto;
+                    min-width: 200px;
+                    float: left;
+                    font-size: 12px;
+                    & .dynamic-sub-menu {
+                        & li {
+                            line-height: initial;
+                            padding: 0px 10px;
+                            &:hover {
+                                color: crimson;
+                            }
+                        }
+                    }
+                    & > ul > li {
+                        line-height: initial;
+                        span {
+                            font-size: 13px;
+                            i {
+                                width: auto;
+                                height: auto;
+                                line-height: initial;
+                                margin: auto;
+                                text-indent: initial;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .ecom-menu-top-products {
+        padding: 0px 50px;
+        a {
+            text-decoration: none;
+            font-size: 12px;
+        }
+    }
+    .ecom-menu-top-products ul li {
+        display: inline-block;
+        padding: 0px 10px;
+        border-right: 1px solid #e0e0e0;
+        line-height: 35px;
+    }
+    .ecom-menu-top-products ul li:last-child{
+        border-right: 0px;
+    }
+}
+
+.ecom-container {
+    padding: 5px 30px;
+    background-color: #f5f5f5;
+}
+.ecom-footer {
+    min-height: 200px;
+    background-color: #f5f5f5;
+    margin: 5px 0px;
+    padding: 5px 30px;
+    .ecom-footer-bottom {
+        background-color: #e91e63;
+        min-height: inherit;
+        .ecom-footer-section {
+            
+            .ecom-footer-section-header {
+                span {
+                    color: white;
+                }
+            }
+        }
+        ul {
+            padding: 0px 10px;
+        }
+        ul li {
+            display: list-item;
+            list-style-type: none;
+            .ecom-footer-section-header > span {
+                color: white;                
+            }
+            a, span {
+                text-decoration: none;
+                color: #444;
+                font-size: 13px;
+                &:hover {
+                    text-decoration: underline;
+                    color: white;
+                }
+            }
+        }
+    }
+}
+@import "_media.layout.scss";

@@ -1,0 +1,25 @@
+<div class="ecom-alert {{ alertType }}" *ngIf="displayAlert">
+    <div class="ecom-alert-container" *ngIf="!isCustomLayout; else alertcustomlayout">
+        <div class="ecom-alert-close" (click)="closeAlertBox()">
+            <span class="alert-icon-close">
+                <i class="fa fa-times ecom-rotate-360" aria-hidden="true"></i>
+            </span>
+        </div>
+        <div class="ecom-alert-header" *ngIf="showHeader">
+
+        </div>
+        <div class="ecom-alert-body" *ngIf="showBody">
+            <div *ngIf="isCustomBodyMessage; else custombodymessage">
+                <p>
+                    {{ bodyMessage }}
+                </p>
+            </div>
+            <ng-template #custombodymessage>
+                {{ bodyMessage }}
+            </ng-template>
+        </div>
+    </div>
+    <ng-template class="ecom-alert-container" #alertcustomlayout>
+        {{ customLayout }}
+    </ng-template>
+</div>

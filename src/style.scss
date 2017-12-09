@@ -1,0 +1,353 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Mukta');
+@import "src/assets/scss/main.scss";
+$font-fontawsome: "normal normal normal 14px/1 FontAwesome";
+body {
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Mukta', sans-serif;    
+    color: rgba(0,0,0,0.87);
+    font-size: 15px;
+    min-width: 1323px;
+}
+body, span, ul, li , table {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    vertical-align: baseline;
+}
+input, button, a , div, label {
+    vertical-align: baseline;
+    outline: none;
+    box-sizing: border-box;
+}
+button {
+    cursor: pointer;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, .4);
+    position: relative;
+    overflow: hidden;
+}
+
+button:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    background: rgba(255, 255, 255, .5);
+    opacity: 0;
+    border-radius: 100%;
+    transform: scale(1, 1) translate(-50%);
+    transform-origin: 50% 50%;
+  }
+  
+  @keyframes ripple {
+    0% {
+      transform: scale(0, 0);
+      opacity: 1;
+    }
+    20% {
+      transform: scale(25, 25);
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      transform: scale(40, 40);
+    }
+  }
+  
+  button:focus:not(:active)::after {
+    animation: ripple 1s ease-out;
+  }
+
+.ecom-pull-right {
+    float: right;
+}
+.ecom-pull-left {
+    float: left;
+}
+.ecom-clearfixed {
+    clear: both;
+}
+.ecom-size-70 {
+    width: 70%;
+}
+.ecom-size-80 {
+    width: 80%;
+}
+.ecom-size-30 {
+    width: 30%;
+}
+.ecom-size-20 {
+    width: 20%;
+}
+.ecom-row {
+    margin: 5px 0px;
+}
+.ecom-text-center {
+    text-align: center;
+}
+.subscribe-box-container {
+    position: relative;
+    .subscribe-box {
+        padding: 10px;
+        font-size: 12px;
+        border: 0px;
+        border-radius: 5px;
+        width: 140px;
+        min-width: 90%;
+    }
+    .subscribe-btn {
+        border: 0px;
+        border-radius: 0px 5px 5px 0px; 
+        padding: 10px;
+        position: absolute;
+        right: 15px;
+        font-size: 0.8em;
+        color: #e91e63;
+    }
+}
+.footer-brand-title {
+    text-align: right;
+    color: #444;
+    line-height: 24px;
+    font-size: 13px;
+    padding: 0px 30px;
+}
+.ecom-model-overlay {
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background-color: #222;
+    opacity: 0.8;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+}
+
+.ecom-rotate-360 {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transform-origin: center;
+    -moz-transform-origin: center;
+    -ms-transform-origin: center;
+    -o-transform-origin: center;
+    transform-origin: center;
+    -webkit-transition: all 0.25s ease-out;
+    -o-transition: all 0.25s ease-out;
+    -moz-transition: all 0.25s ease-out;
+    transition: all 0.25s ease-out;
+    &:hover {
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+        -webkit-transform-origin: center;
+        -moz-transform-origin: center;
+        -ms-transform-origin: center;
+        -o-transform-origin: center;
+        transform-origin: center;
+    }
+}
+
+.ecom-model {
+    position: absolute;
+    width: 50%;
+    min-height: 57%;
+    left: 25%;
+    right: 25%;
+    z-index: 3;
+    top: 27%;
+    border-radius: 5px;
+    background-color: white;
+    .ecom-model-popup {
+        position: relative;
+        .ecom-model-header {
+            min-height: 50px;
+            height: 50px;
+            border-bottom: 1px dotted #c6c6c6;
+            .ecom-model-title {
+                line-height: 50px;
+                padding: 0px 10px;
+                .singupin-title-icon {
+                    color: #e91e63;
+                    animation-name: heartbeat;
+                    animation-duration: 2s;
+                    padding: 5px;
+                    animation-iteration-count: infinite; 
+                }
+                @keyframes heartbeat {
+                    100% {
+                        font-size: 12px;
+                    }
+                }
+                h2 {
+                    font-size: inherit;
+                    margin: 0px;
+                    padding: 0px;
+                    display: inline-block;
+                    color: #444;
+                }
+            }
+            .ecom-model-close {
+                margin: 10px 10px;
+                line-height: 30px;
+                border-radius: 20px;
+                font-size: 12px;
+                width: 30px;
+                background-color: #dcdcdc;
+                text-align: center;
+                cursor: pointer;
+                &:hover {
+                    background-color: #333;
+                    color: white;
+                }
+            }
+        }
+        .ecom-model-body {
+            padding: 5px;
+            margin: 5px;
+        }
+        .ecom-model-footer {
+            min-height: 50px;
+            border-top: 1px dotted #c6c6c6;
+        }
+    }
+}
+
+body.model-open {
+    overflow: hidden;
+}
+
+.ecom-form {
+    .ecom-form-row {
+        margin: 15px 0px;
+        .ecom-form-controls {
+            & > div {
+                display: inline-block;
+            }
+            .sign-fb-g-btn {
+                border: 0px;
+                line-height: 21px;
+                font-size: 12px;
+                padding: 7px;
+                float: left;
+                border-radius: 5px;
+                background-color: #333;
+                color: white;
+                width: 100%;
+                cursor: pointer;
+            }
+            .sign-in-btn {
+                border: 0px;
+                line-height: 21px;
+                font-size: 12px;
+                padding: 7px;
+                width: 100%;
+                float: left;
+                border-radius: 5px;
+                background-color: #e91e63;
+                color: white;
+                min-width: 124px;
+                cursor: pointer;
+            }
+            .sign-up-btn {
+                border: 0px;
+                line-height: 21px;
+                font-size: 12px;
+                padding: 7px;
+                width: 100%;
+                float: left;
+                border-radius: 5px;
+                background-color: #333;
+                color: white;
+                min-width: 124px;
+                cursor: pointer;
+            }
+            .sign-up-confirm-btn {
+                border: 0px;
+                line-height: 21px;
+                font-size: 12px;
+                padding: 7px;
+                width: 100%;
+                float: left;
+                border-radius: 5px;
+                background-color: #333;
+                color: white;
+                min-width: 124px;
+                cursor: pointer;
+            }
+            .ecom-form-icon-label {
+                background-color: #e91e63;
+                color: white;
+                border-radius: 5px;
+            }
+            .ecom-form-icon {
+                float: left;
+                padding: 5px 15px;
+                background-color: #444;
+                color: #f5f5f5;
+                border-radius: 5px 0px 0px 5px;
+            }
+            .ecom-form-label {
+                float: left;
+                padding: 5px;
+            }
+            .ecom-form-control {
+                padding: 10px;
+                font-size: 12px;
+                border-radius: 5px;
+                border: 1px solid #c6c6c6;
+                float: left;
+            }
+        }
+    }
+}
+
+.ecom-hidden {
+    display: none;
+}
+
+.ecom-tabs {
+    padding: 15px 15px;
+    border: 1px solid #e0e0e0;
+    .tabs-btns {
+        border: 1px solid #e0e0e0;
+        cursor: pointer;
+        ul li {
+            display: inline-block;
+            line-height: 25px;
+            padding: 5px 10px;
+            &.active {
+                background-color: #dcdcdc;
+                color: #e91e63;
+            }
+        }
+    }
+    .tabs-container {
+        display: none;
+        &.active {
+            display: block;
+        }
+    }
+}
+
+.ecom-box-open {
+    display: block !important;
+}
+
+.menu-largedevice-list {
+    position: absolute;
+}
+.menu-smalldevice-list {
+
+}
+
+@import "_media.style.scss";

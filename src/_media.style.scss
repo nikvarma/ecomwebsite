@@ -1,0 +1,66 @@
+@media only screen and (max-width: 340px) {
+    .ecom-xxs-hidden {
+        display: none;
+    }
+}
+@media only screen and (max-width: 480px) {
+    .ecom-xs-hidden {
+        display: none;
+    }
+}
+@media only screen and (max-width: 786px) {
+    .ecom-md-hidden {
+        display: none;
+    }
+    .ecom-size-md-100 {
+        width: 100%;
+    }
+    .ecom-size-md-50 {
+        width: 50%;
+    }
+}
+@media only screen and (max-width: 1024px) {
+    .ecom-lg-hidden {
+        display: none;
+    }
+    .ecom-menu-list {
+        .ecom-menu-products {
+            min-width: 120px;
+            width: 15% !important;
+        }
+    }
+    .subscribe-box-container {
+        input.subscribe-box {
+            width: 110px;
+        }
+        button.subscribe-btn {
+            position: absolute;
+            left: initial;
+            right: 0px;
+        }
+    }
+    .ecom-size-lg-50 {
+        width: 50%;
+    }
+    .ecom-size-lg-100 {
+        width: 100%;
+    }
+    .ecom-model {
+        .ecom-model-popup {
+            .ecom-model-header {
+                .ecom-model-title {
+
+                }
+                .ecom-model-close {
+                    position: absolute;
+                    right: 0px;
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width: 1350px) {
+    .ecom-xlg-hidden {
+        display: none;
+    }
+}

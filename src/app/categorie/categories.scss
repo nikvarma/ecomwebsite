@@ -1,0 +1,292 @@
+.ecom-left-filter {
+    .ecom-filter {
+        .ecom-filter-container {
+            .ecom-filter-content {
+                border-radius: 5px 5px 5px 5px;
+                border: 1px solid #e0e0e0;
+                min-width: 200px;
+                width: auto;
+                height: auto;
+                max-height: 300px;  
+                position: relative;              
+                .ecom-filter-header {
+                    position: relative;
+                    height: 35px;
+                    line-height: 35px;
+                    background-color: #444;
+                    padding: 0px 10px;
+                    .ecom-filter-title {
+                        display: inline-block;
+                        color: white;
+                    }
+                    .ecom-filter-close {
+                        position: relative;
+                        top: 7px;
+                        border-radius: 10px 10px 10px 10px;
+                        background-color: white;
+                        color: #444;
+                        height: 20px;
+                        width: 20px;
+                        line-height: 23px;
+                        font-size: 10px;
+                        text-align: center;
+                        cursor: pointer;
+                        &.minuse-icon i:before {
+                            content: "\f068";
+                        }
+                    }
+                }
+                .ecom-filter-body {
+                    max-height: 230px;
+                    min-height: 90px;
+                    overflow: auto;
+                    background-color: white;
+                    transition: all 1s;
+                    &.expanded {
+                        max-height: 0px;
+                        min-height: 0px;
+                    }
+                    .ecom-filter-box {
+                        ul li {
+                            padding: 10px 5px;
+                            line-height: 10px;
+                            display: list-item;
+                            list-style-type: none;
+                            background-color: white;
+                            position: relative;
+                            transition: all 1s;
+                            cursor: pointer;
+                            border-bottom: 1px solid #eeeeee;
+                            &:hover {
+                                background-color: #333;
+                                color: white;
+                                input[type=checkbox] { 
+                                    &:before {
+                                        color: white;
+                                        border: 1px solid white;
+                                    }
+                                }
+                            }
+                            
+                            input[type=checkbox] {
+                                visibility: hidden;
+                                margin: 0px 5px;
+                                &:before {
+                                    content: "☐";                                    
+                                    display: block;
+                                    height: 15px;
+                                    width: 15px;
+                                    line-height: 16px;
+                                    text-align: center;
+                                    visibility: visible;
+                                    font-size: 15px;
+                                    border: 1px solid #333;
+                                    cursor: pointer;
+                                }
+                                
+                            }
+                            &.active {
+                                input[type=checkbox] {
+                                    &:before {
+                                        content: "✔";
+                                        border: 1px solid #333;
+                                    }
+                                }
+                                &:hover input[type=checkbox] {
+                                    &:before {
+                                        border: 1px solid white;
+                                    }
+                                }
+                            }
+                            span {
+
+                            }
+                        }
+                    }
+                }
+                .ecom-filter-footer {
+
+                }
+            }
+        }
+    }
+}
+
+.ecom-right-filter {
+    // position: absolute;
+    position: relative;
+    left: 1%;
+    width: auto;
+    min-width: 83.3%;//79.7%;
+    // left: 18%;
+    .ecom-filter-container {
+        .ecom-filter-content {
+            width: 100%;
+            .ecom-filter-header {
+
+            }
+            .ecom-filter-body {
+
+            }
+            .ecom-filter-footer {
+
+            }
+        }
+    }
+}
+
+
+
+
+/*copy*/
+.ecom-box-details {
+    & > div.ecom-box-silder-content {
+        display: inline-block;
+        margin: 0px 5px;
+        position: relative;
+        height: 300px;
+        width: 250px;
+        background-color: white;
+        &:hover {
+            box-shadow: 2px 2px 5px 2px #dcdcdc;
+        }
+    }
+    .ecom-box-silder-content {
+        .ecom-box-silder-header {
+            position: absolute;
+            width: 100%;
+            .price-discount {
+                padding: 5px;
+                font-size: 12px;
+                .price-tag-off {
+                    padding: 0px 5px;
+                    border: 1px solid #dcdcdc;
+                    border-radius: 5px;
+                }
+            }
+            .like-icon {
+                padding: 5px 10px;
+                cursor: pointer;
+                &:hover i:before {
+                    content: "\f004";
+                    color: #e91e63;
+                }
+            }
+        }
+        .ecom-box-silder-body {
+            // height: inherit;
+            height: 215px;
+            overflow: hidden;
+            text-align: center;
+            vertical-align: middle;
+            .img-box {
+                height: inherit;
+                img {
+                    // height: inherit;
+                    width: auto;
+                    height: auto;
+                    max-width: 250px;
+                    max-height: 245px;
+                }
+            }
+        }
+        .ecom-box-silder-footer {
+            position: absolute;
+            bottom: 0px;
+            .footer-content {
+                .product-name {
+                    font-size: 12px;
+                    height: 40px;
+                    width: 250px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    // white-space: nowrap;
+                    padding: 0px 5px;
+                }
+                .product-rating {
+                    ul li {
+                        display: inline-block;
+                        font-size: 12px;
+                        cursor: pointer;
+                        &:hover i:before {
+                            content: "\f005";
+                            color: #e91e63;
+                        }
+                        & > span {
+                            background-color: #e91e63;
+                            border-radius: 10px;
+                            width: 20px;
+                            color: #f5f5f5;
+                            display: inline-block;
+                        }                        
+                    }
+                    ul {
+                        &:hover li i:before {
+                            content: "\f005";
+                            color: #e91e63;
+                        }
+                        & li:hover ~ li i:before {
+                            content: "\f006";
+                            color: black;
+                        }
+                    }
+                    .active {
+                        & i:before {
+                            content: "\f005";
+                            color: #e91e63;
+                        }
+                    }
+                }
+                .product-price-discount {
+                    .product-discount-price {
+                        text-decoration: line-through;
+                        text-decoration-color: #333;
+                        text-decoration-style: double;
+                    }
+                    .product-addto-cart {
+                        padding: 0px 10px;
+                        background-color: #333;
+                        color: white;
+                        & code {
+                            display: none;
+                        }
+                        &:hover {
+                            position: absolute;
+                            width: 100%;
+                            left: 0px;
+                            & code {
+                                display: inline-block;
+                                padding: 0px 5px;
+                            }
+                        }
+                    }
+                    .product-direct-buy {
+                        padding: 0px 10px;
+                        background-color: #e91e63;
+                        & code {
+                            display: none;
+                        }
+                        a {
+                            display: block;
+                            width: 100%;
+                            color: white;
+                            text-decoration: none;
+                        }
+                        &:hover {
+                            position: absolute;
+                            width: 100%;
+                            left: 0px;
+                            & code {
+                                display: inline-block;
+                                padding: 0px 5px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        & > div {
+
+        }
+    }
+}
