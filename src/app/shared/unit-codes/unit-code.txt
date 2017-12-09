@@ -1,0 +1,53 @@
+// setInterval(() => {
+//     const factory = this.componentFactoryResolver.resolveComponentFactory(AlertComponentDirective);            
+//     const ref = this.viewContainerRef.createComponent(factory);
+//     ref.instance.displayAlert = true;
+//     ref.instance.alertInstance = ref;
+//     ref.changeDetectorRef.detectChanges();
+// }, 5000);
+
+import { Injectable, ViewContainerRef, ReflectiveInjector, ComponentFactoryResolver, ComponentRef } from '@angular/core';
+
+import { HelloComponent, HelloModel } from './hello.component';
+
+@Injectable()
+export class DynamicCompService {
+
+  constructor (private componentFactoryResolver: ComponentFactoryResolver) { }
+
+  public createHelloComp (vCref: ViewContainerRef, modelInput: HelloModel): ComponentRef {
+
+    let factory = this.componentFactoryResolver.resolveComponentFactory(HelloComponent);
+
+    // vCref is needed cause of that injector..
+    let injector = ReflectiveInjector.fromResolvedProviders([], vCref.parentInjector);
+
+    // create component without adding it directly to the DOM
+    let comp = factory.create(injector);
+
+    // add inputs first !! otherwise component/template crashes ..
+    comp.instance.model = modelInput;
+
+    // all inputs set? add it to the DOM ..
+    vCref.insert(comp.hostView);
+
+    return comp;
+  }
+}
+
+custom utility
+
+// let ele = this.elementRef.nativeElement.querySelectorAll(".tabs-btn");
+// ele.forEach(element => {
+//     element.className += " Okk";
+//     //element.classList.remove("active");
+//     console.log(element.classList.contains("active"));
+// });
+
+// let id = event.target["dataset"].target;
+
+// console.log(ele);
+// console.log(event);
+
+currency code url
+https://www.toptal.com/designers/htmlarrows/currency/

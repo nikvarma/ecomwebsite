@@ -1,0 +1,183 @@
+<div class="ecom-row ecom-md-hidden">
+    <div class="ecom-slider-container ecom-pull-left ecom-size-md-100 ecom-size-80">
+        <div class="ecom-slider-left-arrow" (click)="slideLeftArrow()">
+            <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        </div>
+        <div class="ecom-silder">
+            <div class="ecom-images" id="home-silder">
+                <ul>
+                    <li>
+                        <img src="../../assets/images/offer-images/img-0.jpg" alt="" />
+                    </li>
+                    <li>
+                        <img src="../../assets/images/offer-images/img-2.jpg" alt="" />
+                    </li>
+                </ul>
+            </div>
+            <div class="ecom-slider-bottom" id="home-silde-bottom">
+                <ul>
+                    <li>
+                        <a href="" data-index="0" class="active" (click)="silderTabClick($event)">Electronics</a>
+                    </li>
+                    <li>
+                        <a href="" data-index="1" (click)="silderTabClick($event)">Mobiles</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="ecom-slider-right-arrow" (click)="slideRightArrow()">
+            <i class="fa fa-chevron-right" aria-hidden="true"></i>
+        </div>
+        <div class="ecom-clearfixed"></div>
+    </div>
+    <div class="ecom-size-20 ecom-md-hidden ecom-box-container ecom-height-300 ecom-pull-right">
+        <div class="ecom-box-content">
+            <div class="ecom-box">
+                Text
+            </div>
+        </div>
+    </div>
+    <div class="ecom-clearfixed"></div>
+</div>
+
+<div class="ecom-row">
+    <div class="ecom-box-slider">
+        <div class="ecom-box-silder-container">
+            <div class="ecom-box-arrow-left" (click)="boxSlider()" data-index="0" id="slider-left-btn-arrow">
+                <i class="fa fa-chevron-left" aria-hidden="true"></i>
+            </div>
+            <div class="ecom-box-slider-boxs" id="ecom-box-slider-boxs">
+                <div class="ecom-box-silder-content" id="slider_id_{{ i + '_' + item.id }}" *ngFor="let item of productList; let i = index">
+                    <div class="ecom-box-silder-header">
+                        <div class="price-discount ecom-pull-left">
+                            <span class="price-tag-off">
+                                <!-- 30% OFF -->
+                                {{ item.priceoffer }}
+                            </span>
+                        </div>
+                        <div class="like-icon ecom-pull-right">
+                            <i class="{{ userDetails.isUserLiked ? 'fa fa-heart' : 'fa fa-heart-o' }}" aria-hidden="true"></i>
+                        </div>
+                        <div class="ecom-clearfixed"></div>
+                    </div>
+                    <div class="ecom-box-silder-body">
+                        <div class="img-box">
+                            <img src="{{ item.images[0].image }}" alt="{{ item.images[0].alt }}" />
+                        </div>
+                    </div>
+                    <div class="ecom-box-silder-footer">
+                        <div class="footer-content">
+                            <div class="product-name">
+                                {{ item.productdetail.describtion }}
+                            </div>
+                            <div class="product-rating ecom-text-center">
+                                <ul id="{{ item.productdetail.name }}_{{ item.id }}">
+                                    <li class="{{ (item.productdetail.totalrating == 1) ? 'active' : '' }}" data-id="{{ item.productdetail.name }}_{{ item.id }}"
+                                        data-value="1">
+                                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                                    </li>
+                                    <li class="{{ (item.productdetail.totalrating == 2) ? 'active' : '' }}" data-value="2" data-id="{{ item.productdetail.name }}_{{ item.id }}">
+                                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                                    </li>
+                                    <li class="{{ (item.productdetail.totalrating == 3) ? 'active' : '' }}" data-value="3" data-id="{{ item.productdetail.name }}_{{ item.id }}">
+                                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                                    </li>
+                                    <li class="{{ (item.productdetail.totalrating == 4) ? 'active' : '' }}" data-value="4" data-id="{{ item.productdetail.name }}_{{ item.id }}">
+                                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                                    </li>
+                                    <li class="{{ (item.productdetail.totalrating == 5) ? 'active' : '' }}" data-value="5" data-id="{{ item.productdetail.name }}_{{ item.id }}">
+                                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                                    </li>
+                                    <li>
+                                        <span>{{ item.productdetail.totalrating }}</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="product-price-discount ecom-text-center">
+                                <span class="product-actual-price">
+                                    <span class="currency-type">{{ item.currency.type }}</span> {{ item.productdetail.offerprice }}
+                                </span>
+                                <span class="product-discount-price">
+                                    <span class="currency-type">{{ item.currency.type }}</span> {{ item.productdetail.discountprice }}
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <div class="ecom-clearfixed"></div> -->
+            </div>
+            <div class="ecom-box-arrow-right" (click)="boxSlider()" data-index="0" id="slider-right-btn-arrow">
+                <i class="fa fa-chevron-right" aria-hidden="true"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="ecom-row">
+    <banner-box>
+
+    </banner-box>
+</div>
+
+<div class="ecom-row">
+    <div class="ecom-box-details">
+        <div class="ecom-box-silder-content ecom-col-xsm-6 ecom-col-sm-6 ecom-col-md-4 ecom-col-lg-2 ecom-col-xlg-2" *ngFor="let i of [0,1,2....9]">
+            <div class="ecom-box-silder-header">
+                <div class="price-discount ecom-pull-left">
+                    <span class="price-tag-off">
+                        30% OFF
+                    </span>
+                </div>
+                <div class="like-icon ecom-pull-right">
+                    <i class="{{ userDetails.isUserLiked ? 'fa fa-heart' : 'fa fa-heart-o' }}" aria-hidden="true"></i>
+                </div>
+                <div class="ecom-clearfixed"></div>
+            </div>
+            <div class="ecom-box-silder-body">
+                <div class="img-box">
+                    <img src="assets/images/products-images/img-0.jpg" alt="" />
+                </div>
+            </div>
+            <div class="ecom-box-silder-footer">
+                <div class="footer-content">
+                    <div class="product-name">
+                        Dell Inspiron 3567 Notebook (6th Gen Intel Core i3- 4GB RAM- 1TB HDD- 39.62cm(15.6)- Ubuntu) (Black)
+                    </div>
+                    <div class="product-rating ecom-text-center">
+                        <ul id="dell_100100100">
+                            <li (click)="ratingProduct($event)" data-parentid="dell_100100100" data-value="1">
+                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                            </li>
+                            <li (click)="ratingProduct($event)" data-parentid="dell_100100100" data-value="2">
+                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                            </li>
+                            <li (click)="ratingProduct($event)" data-parentid="dell_100100100" class="active" data-value="3">
+                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                            </li>
+                            <li (click)="ratingProduct($event)" data-parentid="dell_100100100" data-value="4">
+                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                            </li>
+                            <li (click)="ratingProduct($event)" data-parentid="dell_100100100" data-value="5">
+                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                            </li>
+                            <li>
+                                <span>30</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="product-price-discount ecom-text-center">
+                        <span class="product-actual-price">
+                            <span class="currency-type">Rs</span> 23,000
+                        </span>
+                        <span class="product-discount-price">
+                            <span class="currency-type">Rs</span> 25,000
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>

@@ -1,0 +1,358 @@
+@import "_media.home.scss";
+.ecom-row {
+
+}
+.ecom-padding-0-5 {
+    padding: 0px 5px;
+}
+.ecom-height-300 {
+    min-height: 300px;
+}
+.ecom-box-container {
+    .ecom-box-content {
+        background-color: white;
+        margin: 0px 10px;
+        padding: 0px 10px;
+        min-height: inherit;
+        border-radius: 5px;
+        .ecom-box {
+
+        }
+    }
+}
+
+.ecom-box-slider {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    .ecom-box-silder-container {
+
+        .ecom-box-arrow-left {
+            left: 0px;
+        }
+        .ecom-box-arrow-right {
+            right: 0px;
+        }
+        .ecom-box-arrow-right:hover, .ecom-box-arrow-left:hover {
+            background-color: #222;
+            color: #f5f5f5;
+        }
+        .ecom-box-arrow-right, .ecom-box-arrow-left {
+            position: absolute;
+            top: 40%;
+            cursor: pointer;
+            z-index: 1;
+            width: 28px;
+            height: 28px;
+            line-height: 21px;
+            text-align: center;
+            margin: 0px 10px;
+            font-size: 13px;
+            padding: 5px 5px;
+            border-radius: 22px;
+            background-color: #f5f5f5;
+        }
+        min-height: 280px;
+        background-color: white;
+        height: 280px;
+        overflow: hidden;
+        .ecom-box-slider-boxs {
+            height: inherit;
+            display: flex;
+            flex-direction: row;
+            flex-flow: nowrap;
+            flex-wrap: nowrap;
+            & div.ecom-box-silder-content {
+                display: inline-block;
+                height: inherit;
+                position: relative;
+                flex: none;
+                padding: 0px 5px;
+                max-width: 250px;
+                width: 250px;
+                transition: all 0.8s;
+                border-right: 1px solid #eeeeee;
+                &:hover {
+                    box-shadow: 0px 0px 5px 4px #dcdcdc;
+                }
+            }
+            .ecom-box-silder-content {
+                .ecom-box-silder-header {
+                    position: absolute;
+                    width: 100%;
+                    .price-discount {
+                        padding: 5px;
+                        font-size: 12px;
+                        .price-tag-off {
+                            padding: 0px 5px;
+                            border: 1px solid #dcdcdc;
+                            border-radius: 5px;
+                        }
+                    }
+                    .like-icon {
+                        padding: 5px 10px;
+                        cursor: pointer;
+                        &:hover i:before {
+                            content: "\f004";
+                            color: #e91e63;
+                        }
+                    }
+                }
+                .ecom-box-silder-body {
+                    height: 215px;
+                    overflow: hidden;
+                    text-align: center;
+                    // height: inherit;
+                    .img-box {
+                        height: inherit;
+                        img {
+                            // height: inherit;
+                            width: auto;
+                            height: auto;
+                            max-width: 250px;
+                            max-height: 245px;
+                        }
+                    }
+                }
+                .ecom-box-silder-footer {
+                    position: absolute;
+                    bottom: 0px;
+                    .footer-content {
+                        .product-name {
+                            font-size: 12px;
+                            height: 20px;
+                            width: 240px;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                        }
+                        .product-rating {
+                            ul li {
+                                display: inline-block;
+                                font-size: 12px;
+                                cursor: pointer;
+                                &:hover i:before {
+                                    content: "\f005";
+                                    color: #e91e63;
+                                }
+                                & > span {
+                                    background-color: #e91e63;
+                                    border-radius: 10px;
+                                    width: 20px;
+                                    color: #f5f5f5;
+                                    display: inline-block;
+                                }
+                            }
+                            .active {
+                                & i:before {
+                                    content: "\f005";
+                                    color: #e91e63;
+                                }
+                            }
+                        }
+                        .product-price-discount {
+                            .product-discount-price {
+                                text-decoration: line-through;
+                                text-decoration-color: #333;
+                                text-decoration-style: double;
+                            }
+                        }
+                    }
+                }
+                & > div {
+
+                }
+            }
+        }
+    }
+}
+
+.slider-slide-hidden {
+    animation: sildermover 2s;
+}
+
+@keyframes sildermover {
+    0% { margin-left: 0px }
+    100% { margin-left: -250px }
+}
+
+.ecom-slider-container {
+    position: relative;
+    min-height: 300px;
+    .ecom-slider-left-arrow, .ecom-slider-right-arrow {
+        position: absolute;
+        top: 32%;
+        padding: 10px;
+        background-color: white;
+        line-height: 10px;
+        cursor: pointer;
+        z-index: 1;
+    }
+    .ecom-slider-left-arrow {
+        left: 0px;
+    }
+    .ecom-slider-right-arrow {
+        right: 0px;
+    }
+    .ecom-silder {
+        overflow: hidden;
+        white-space: nowrap;
+        border-radius: 5px 5px;
+        .ecom-images {
+            max-height: 260px; //255
+        }
+        .ecom-slider-bottom {
+            min-height: 40px;
+            background-color: white;
+            ul li {
+                display: inline-flex;
+                a {
+                    text-decoration: none;
+                    padding: 0px 20px;
+                    font-size: 13px;
+                    line-height: 40px;
+                    color: #222;
+                    &:hover, &.active {
+                        background-color: #333;
+                        color: #f8f8f8;
+                    }
+                }
+            }
+        }
+        ul li img {
+            width: 100%;
+            image-rendering: auto;
+        }
+        ul li {
+            display: inline-block;
+            &.active-slide {
+                position: absolute;
+                left: 0%;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+.ecom-box-details {
+    & > div.ecom-box-silder-content {
+        display: inline-block;
+        //margin: 0px 5px;
+        position: relative;
+        height: 17em; //285px; //300px;
+        //width: 250px;
+        background-color: white;
+        border: solid 1px whitesmoke;
+        &:hover {
+            box-shadow: 2px 2px 5px 2px #dcdcdc;
+        }
+    }
+    .ecom-box-silder-content {
+        .ecom-box-silder-header {
+            position: absolute;
+            width: 100%;
+            .price-discount {
+                padding: 5px;
+                font-size: 12px;
+                .price-tag-off {
+                    padding: 0px 5px;
+                    border: 1px solid #dcdcdc;
+                    border-radius: 5px;
+                }
+            }
+            .like-icon {
+                padding: 5px 10px;
+                cursor: pointer;
+                &:hover i:before {
+                    content: "\f004";
+                    color: #e91e63;
+                }
+            }
+        }
+        .ecom-box-silder-body {
+            // height: inherit;
+            height: 215px;
+            overflow: hidden;
+            text-align: center;
+            vertical-align: middle;
+            .img-box {
+                height: inherit;
+                img {
+                    // height: inherit;
+                    width: auto;
+                    height: auto;
+                    max-width: 250px;
+                    max-height: 200px; //245px;
+                }
+            }
+        }
+        .ecom-box-silder-footer {
+            position: absolute;
+            bottom: 0px;
+            text-align: center;
+            .footer-content {
+                .product-name {
+                    font-size: 12px;
+                    height: 40px;
+                    width: auto; //250px
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    // white-space: nowrap;
+                    padding: 0px 5px;
+                }
+                .product-rating {
+                    ul li {
+                        display: inline-block;
+                        font-size: 12px;
+                        cursor: pointer;
+                        &:hover i:before {
+                            content: "\f005";
+                            color: #e91e63;
+                        }
+                        & > span {
+                            background-color: #e91e63;
+                            border-radius: 10px;
+                            width: 20px;
+                            color: #f5f5f5;
+                            display: inline-block;
+                        }                        
+                    }
+                    ul {
+                        &:hover li i:before {
+                            content: "\f005";
+                            color: #e91e63;
+                        }
+                        & li:hover ~ li i:before {
+                            content: "\f006";
+                            color: black;
+                        }
+                    }
+                    .active {
+                        & i:before {
+                            content: "\f005";
+                            color: #e91e63;
+                        }
+                    }
+                }
+                .product-price-discount {
+                    .product-discount-price {
+                        text-decoration: line-through;
+                        text-decoration-color: #333;
+                        text-decoration-style: double;
+                    }
+                }
+            }
+        }
+        & > div {
+
+        }
+    }
+}

@@ -1,0 +1,60 @@
+alert-box {
+    .ecom-alert {
+        z-index: 9;
+        position: fixed;
+        top: 5px;
+        left: 35%;
+        right: 35%;        
+        padding: 5px;
+        min-height: 35px;
+        border-radius: 5px;
+        min-width: 25%;
+        &.alert-success {
+            background-color: #18b0bf;
+            .alert-icon-close {
+                background-color: #098876;
+            }
+        }
+        &.alert-danger {
+            background-color: rgba(202, 41, 56, 0.77);
+            .alert-icon-close { 
+                background-color: #e91e63;
+            }
+        }
+        &.alert-info {
+            background-color: #7590d4;
+            .alert-icon-close {
+                background-color: #2f5bb7;
+            }
+        }
+        .ecom-alert-container {
+            .ecom-alert-close {
+                position: absolute;
+                right: 0px;
+                .alert-icon-close {
+                    padding: 5px 10px;
+                    line-height: 35px;
+                    border-radius: 20px;
+                    font-size: 10px;
+                    margin: 0px 5px;
+                    color: white;
+                    cursor: pointer;
+                    &:hover {
+                        background-color: #444;
+                    }
+                }
+            }
+            .ecom-alert-header {
+
+            }
+            .ecom-alert-body {
+                color: white;
+                padding: 5px;
+                p {
+                    font-size: 14px;
+                    margin: 0px;
+                }
+            }
+        }
+    }
+}

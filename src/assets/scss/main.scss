@@ -1,0 +1,23 @@
+@import "./vendor/fontawsome/font-awesome.scss";
+@import "mixin/_mixin.scss";
+
+@media screen and (max-width: 460px) {
+    @include gen-columns('xsm');
+}
+
+
+@media screen and (min-width: 460px) and (max-width: 767px) {
+    @include gen-columns('sm');
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    @include gen-columns('md');
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1365px) {
+    @include gen-columns('lg');
+}
+
+@media screen and (min-width: 1366px) {
+    @include gen-columns('lg');
+}

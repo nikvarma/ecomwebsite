@@ -1,0 +1,10 @@
+@mixin gen-columns($size, $number: 12) {
+  $num: 1 / $number;
+  $colsize: 0;
+  @for $i from 1 through 12 {
+    .ecom-col-#{$size}-#{$i} {
+      $colsize: $colsize + $num;
+      width: percentage($number: $colsize);
+    }
+  }
+}

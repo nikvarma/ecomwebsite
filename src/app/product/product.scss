@@ -1,0 +1,350 @@
+.ecom-box-fulldetail {
+    .ecom-image-viewer {
+
+    }
+}
+
+.ecom-tabber {
+    .tabber-container {
+        .tabber-content {
+            .tabber-header {
+                ul li {
+                    list-style-type: none;
+                    display: inline-block;
+                    max-width: 50px;
+                    max-height: 50px;
+                    overflow: hidden;
+                    cursor: pointer;
+                    width: auto;
+                    text-align: center;
+                    box-shadow: 1px 1px 1px 0px #e0e0e0;
+                    & img {
+                        width: auto;
+                        max-width: 100%;
+                        height: auto;
+                        max-height: inherit;
+                    }
+                }
+                ul {
+
+                }
+                span {
+
+                }
+            }
+            .tabber-body {
+                .tabber-viewer {
+                    width: auto;
+                    max-width: 319px;
+                    height: auto;
+                    max-height: 370px;
+                    text-align: center;
+                    background-color: white;
+                    & img {
+                        width: auto;
+                        max-width: 100%;
+                        height: auto;
+                        max-height: inherit;
+                    }
+                }
+            }
+            .tabber-footer {
+
+            }
+        }
+    }
+}
+
+.ecom-details-viewer {
+    padding: 0px 5px;
+    .details-viewer-container {
+        
+        .details-viewer-content {
+            
+            .details-viewer-header {
+                max-height: 50px;
+                height: 50px;
+                line-height: 30px;
+                background-color: white;
+                padding: 10px;
+                .viewer-title {
+                    
+                }
+                .like-icon {
+                    width: 30px;
+                    height: 30px;
+                    text-align: center;
+                    margin: 0px 10px;
+                    cursor: pointer;
+                    font-size: 20px;
+                    &:hover i:before, &.active i:before {
+                        content: "\f004";
+                        color: #e91e63;
+                    }
+                }
+            }
+            .details-viewer-body {
+                border-top: 8px solid #f5f5f5;
+                .details-viewer-container-tabs {
+                    background-color: white;
+                    padding: 5px 5px;
+                    .details-viewer-tabs {
+                        ul li {
+                            display: inline-flex;
+                            list-style-type: none;
+                            padding: 0px 15px;
+                            line-height: 35px;
+                            width: auto;
+                            max-width: 150px;
+                            overflow: hidden;
+                            white-space: nowrap;
+                            cursor: pointer;
+                            border-bottom: 2px solid white;
+                            transition: all 1s;
+                            &:hover, &.active {
+                                border-bottom: 2px solid #e91e63;
+                            }
+                        }
+                    }
+                    .details-viewer-tab {
+                        height: 324px;
+                        max-height: 324px;
+                        overflow: auto;
+                        background-color: #f5f5f5;
+                        .price-details {
+                            .discount-actuall-price {
+                                margin: 0px 15px;
+                                text-decoration: line-through;
+                                text-decoration-color: #444;
+                                text-decoration-style: double;
+                                .currency-symbol {
+
+                                }
+                            }
+                            .discount-price {
+                                margin: 0px 15px;
+                                .currency-symbol {
+
+                                }
+                            }
+                            .discount-offer {
+                                padding: 5px;
+                                background-color: white;
+                                line-height: 25px;
+                                border: 1px solid #dcdcdc;
+                                border-radius: 10px;
+                                font-size: 13px;
+                                margin: 0px 5px;
+                            }
+                        }
+                        .emi-details {
+                            display: inline-block;
+                            margin: 5px 0px;
+                            background-color: white;
+                            padding: 10px 0px;                            
+                            .emi-detail-text, & > span {
+                                padding: 0px 5px;
+                            }
+                        }
+                        .ecom-product-description {
+                            width: 100%;
+                            min-height: 124px;
+                            background-color: white;
+                            & ul li {
+                                float: left;
+                                display: inline-flex;
+                                width: auto;
+                                min-width: 20%;
+                                margin: 5px 0px;
+                                .detail-name {
+                                    padding: 0px 5px;
+                                    border-left: 2px solid #e91e63;
+                                }
+                                .detail-value {
+                                    padding: 0px 5px;
+                                    font-size: 13px;
+                                    line-height: 26px;
+                                }
+                            }
+                        }
+                        .products-color-availables {
+                            line-height: 15px;
+                            display: inline-block;
+                            margin: 5px 0px;
+                            background-color: white;
+                            padding: 10px 10px;
+                            width: auto;
+                            min-width: 100%;
+                            & > div {
+                                display: inline-block;
+                                vertical-align: text-top;
+                            }
+                            .available-color-text {
+                                padding: 5px 10px;
+                            }
+                            .available-color-detail {
+                                margin: 1px 0px;
+                            }
+                            & ul li {
+                                display: inline-block;
+                                width: 12px;
+                                height: 12px;
+                                padding: 10px;
+                                background-color: #e91e63;
+                                border-radius: 10px;
+                                cursor: pointer;
+                            }
+                        }
+                        .buy-cart-btns {
+                            padding: 0px 5px;
+                            background-color: white;
+                            margin: 5px 0px;
+                            & > div {
+                                display: inline-block;
+                            }
+                            .addtocart-btn {
+                                margin: 5px 0px;
+                                button {
+                                    padding: 15px 10px;
+                                    font-size: 13px;
+                                    border: 0px;
+                                    background-color: #444;
+                                    color: white;
+                                    border-radius: 3px;
+                                }
+                            }
+                            .buy-btn {
+                                margin: 5px 0px;
+                                button {
+                                    padding: 15px 10px;
+                                    border: 0px;
+                                    font-size: 13px;
+                                    background-color: #e91e63;
+                                    color: white;
+                                    border-radius: 3px;
+                                }
+                            }
+                        }
+                        .check-pin-devlivery {
+                            margin: 5px 0px;
+                            padding: 5px 5px;
+                            background-color: white;
+                            input {
+                                padding: 10px;
+                                font-size: 13px;
+                                border-radius: 3px;
+                                border: 1px solid #444;
+                            }
+                            button {
+                                padding: 5px;
+                                font-size: 13px;
+                                color: white;
+                                background-color: #444;
+                                border: 0px;
+                                line-height: 27px;
+                                width: 94px;
+                                margin-left: -61px;
+                                border-radius: 3px;
+                            }
+                        }
+                    }
+                }                    
+            }
+        }
+    }
+}
+
+.ecom-checkoutdetails {
+    width: auto;
+    .ecom-checkout-container-sm {
+        width: 100%;
+        .ecom-checkout-content {
+            padding: 0px;
+            height: 429px;
+            overflow: auto;
+            min-height: 429px;
+            background-color: white;
+            .checkoutbg-btn {
+                padding: 10px;
+                font-size: 12px;
+                border-radius: 3px;
+                color: white;
+                background-color: #444;
+                line-height: 25px;
+                border: 0px;
+                text-transform: uppercase;
+                cursor: pointer;
+            }
+            .ecom-checkout-header {
+                padding: 5px 5px;
+                border-bottom: 1px solid #eee;
+            }
+            .ecom-checkout-body {
+                margin: 5px 0px;
+                padding: 0px 0px;
+                .header-text {
+                    margin: 2px 0px;
+                    border-bottom: 1px solid #e0e0e0;
+                    & > div {
+                        display: inline-block;
+                        width: auto;
+                        min-width: 75px;
+                        max-width: 77px;
+                        text-align: center;
+                        padding: 10px 0px;
+                    }
+                }
+                .header-value {
+                    height: auto;
+                    max-height: 315px;
+                    overflow: auto;
+                    .header-value-panel {
+                        margin: 2px 0px;
+                        border-bottom: 1px solid #e0e0e0;
+                        position: relative;
+                        & .remove-product-btn {
+                            position: absolute;
+                            right: 5%;
+                            padding: 5px 10px;
+                            bottom: 0%;
+                            cursor: pointer;
+                        }
+                        & .value-deatail {
+                            display: block;
+                            width: 312px;
+                            height: auto;
+                            max-height: 40px;
+                            padding: 0px 10px;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            max-width: 100%;
+                            text-align: left;
+                        }
+                        & > div {
+                            width: auto;
+                            min-width: 75px;
+                            display: inline-block;
+                            max-width: 77px;
+                            text-align: center;
+                            font-size: 13px;
+                            vertical-align: middle;
+                            & > img {
+                                display: block;
+                                width: 100%;
+                            }
+                            & > select {
+                                padding: 5px;
+                                border: 1px solid #ccc;
+                                border-radius: 3px;
+                                font-size: 11px;
+                            }
+                        }
+                    }
+                }
+            }
+            .ecom-checkout-footer {
+
+            }
+        }
+    }
+}

@@ -1,0 +1,235 @@
+<div class="ecom-nav ecom-nav-bar">
+    <div class="top-nav-bar">
+        <div class="ecom-pull-left">
+
+        </div>
+        <div class="ecom-pull-right">
+            <ul class="top-usefull-links">
+                <li>
+                    <a href="">Donwload App</a>
+                </li>
+                <li>
+                    <a href="">Sell on with us</a>
+                </li>
+                <li>
+                    <a href="">Track your product</a>
+                </li>
+                <li>
+                    <a href="">Help</a>
+                </li>
+            </ul>
+        </div>
+        <div class="ecom-clearfixed"></div>
+    </div>
+
+
+    <div class="ecom-nav-bar-header">
+        <div class="ecom-nav-left ecom-pull-left">
+            <div class="ecom-nav-logo">
+                <a href="">E-Commernce</a>
+            </div>
+        </div>
+
+        <div class="ecom-nav-right ecom-pull-right">
+            <div class="ecom-nav-section section-control">
+                <div class="login-control inline-control" (click)="authenticate()">
+                    Sign In
+                    <i class="fa fa-lock" aria-hidden="true"></i>
+                </div>
+                <div class="cart-control inline-control">
+                    <div class="cart-text-icon">
+                        Cart
+                        <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ecom-search-control ecom-col-xsm-12 ecom-col-sm-7 ecom-col-lg-8">
+            <input type="text" name="ecom_search_control" id="searchbox" #searchbox (keyup)="searchAll(searchbox)" placeholder="Search...... Mobile, Electronics, Apperals, Home products, Farnichars, Kid toys, Fashion & 5 L+ products"
+                data-target="#search-results" />
+            <button type="button" class="ecom-search-btn">
+                <i class="fa fa-search" aria-hidden="true"></i>
+            </button>
+            <div class="search-results" id="search-results" (click)="closePanel($event)">
+                <div data-id="1" data-text="Mobiles">
+                    Mobiles
+                </div>
+                <div>
+                    Electronics
+                </div>
+                <div>
+                    Apperals
+                </div>
+            </div>
+            <div class="ecom-clearfixed"></div>
+        </div>
+        <div class="ecom-clearfixed"></div>
+    </div>
+</div>
+
+<div class="ecom-container padding-top-bottom-0 ecom-menu-contriner">
+    <div class="ecom-menu-list">
+        <div class="ecom-menu-products" #globalmenubartop (click)="menuOpen(globalmenubartop)" data-target="#dynamic-menu-global">
+            <span class="menu-icon">
+                <i class="fa fa-th-large" aria-hidden="true"></i>
+            </span>
+            <span>Menu</span>
+            <span class="ecom-pull-right">
+                <i class="fa fa-chevron-down" aria-hidden="true"></i>
+            </span>
+            <div class="dynamic-menu" id="dynamic-menu-global">
+                <ul>
+                    <li *ngFor="let menu of menuList; let i = index;">
+                        <span>
+                            <i class="fa {{ (!menu?.icon) ? 'fa-shopping-basket' : menu.icon }}" aria-hidden="true"></i>
+                            {{ menu.menu }}
+                        </span>
+                        <div class="dynamic-submenu">
+                            <div class="dynamic-submenu-tab">
+                                <ul>
+                                    <li *ngFor="let submenu of menu.submenu; let j = index;">
+                                        <span>
+                                            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                                            {{ getObjectKeys(submenu) }}
+                                        </span>
+                                        <ul class="dynamic-sub-menu">
+                                            <li>Two Droos</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="ecom-clearfixed"></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="ecom-clearfixed"></div>
+        </div>
+        <div class="ecom-menu-top-products">
+            <ul>
+                <li>
+                    <a href="mobile/1">Mobiles</a>
+                </li>
+                <li>
+                    <a href="">Electronics</a>
+                </li>
+                <li>
+                    <a href="">Apperals</a>
+                </li>
+                <li>
+                    <a href="">Home Products</a>
+                </li>
+                <li>
+                    <a href="">Kid Toys</a>
+                </li>
+                <li>
+                    <a href="">Fashion</a>
+                </li>
+                <li>
+                    <a href="">Farnichars</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="ecom-container">
+    <router-outlet></router-outlet>
+</div>
+
+<div class="ecom-footer">
+    <div class="ecom-footer-bottom">
+        <div class="ecom-size-20 ecom-col-xsm-6 ecom-col-sm-6 ecom-footer-section ecom-pull-left">
+            <ul>
+                <li class="ecom-footer-section-header">
+                    <span>POLICY INFO</span>
+                </li>
+                <li>
+                    <a href="">Privacy Policy</a>
+                </li>
+                <li>
+                    <a href="">Terms of Sale</a>
+                </li>
+                <li>
+                    <a href="">Terms of Use</a>
+                </li>
+                <li>
+                    <a href="">Report Abuse & Takedown Policy</a>
+                </li>
+            </ul>
+        </div>
+        <div class="ecom-size-20 ecom-col-xsm-6 ecom-col-sm-6 ecom-footer-section ecom-pull-left">
+            <ul>
+                <li class="ecom-footer-section-header">
+                    <span>COMPANY</span>
+                </li>
+                <li>
+                    <a href="">About Us</a>
+                </li>
+                <li>
+                    <a href="">Core Values</a>
+                </li>
+                <li>
+                    <a href="">Blog</a>
+                </li>
+                <li>
+                    <a href="">Sitemap</a>
+                </li>
+            </ul>
+        </div>
+        <div class="ecom-size-20 ecom-col-xsm-6 ecom-col-sm-6 ecom-footer-section ecom-pull-left">
+            <ul>
+                <li class="ecom-footer-section-header">
+                    <span>CONNECT WITH US</span>
+                </li>
+                <li>
+                    <a href="">Online Shopping</a>
+                </li>
+                <li>
+                    <a href="">Sell on E-Commernce</a>
+                </li>
+                <li>
+                    <a href="">Advertise on E-Commernce</a>
+                </li>
+                <li>
+                    <a href="">Be an Affiliate</a>
+                </li>
+            </ul>
+        </div>
+        <div class="ecom-size-20 ecom-col-xsm-6 ecom-col-sm-6 ecom-footer-section ecom-pull-left">
+            <ul>
+                <li class="ecom-footer-section-header">
+                    <span>NEED HELP ?</span>
+                </li>
+                <li>
+                    <a href="">FAQ</a>
+                </li>
+                <li>
+                    <a href="">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+        <div class="ecom-size-20 ecom-col-xsm-6 ecom-col-sm-6 ecom-footer-section ecom-pull-left">
+            <ul>
+                <li class="ecom-footer-section-header">
+                    <span>SUBSCRIBE</span>
+                </li>
+                <li class="subscribe-box-container">
+                    <input type="text" class="subscribe-box" placeholder="Your e-mail address" />
+                    <button type="button" class="subscribe-btn">Subscribe</button>
+                </li>
+                <li>
+                    <span>Register now to get updates on promotions and coupons</span>
+                    <a href="">Install our App</a>
+                </li>
+            </ul>
+        </div>
+        <div class="ecom-clearfixed"></div>
+    </div>
+</div>
+
+<div class="ecom-row">
+    <div class="footer-brand-title">
+        All copy reserved with E-Com
+    </div>
+</div>

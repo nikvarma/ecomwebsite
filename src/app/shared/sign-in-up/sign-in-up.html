@@ -1,0 +1,215 @@
+<div class="ecom-model" id="signinuptabs" *ngIf="displaySignInUpBox">
+    <div class="ecom-model-popup">
+        <div class="ecom-model-header">
+            <div class="ecom-model-title ecom-pull-left">
+                <h2>Sing In/Sign Up - Just few click and setup your account</h2>
+                <span class="singupin-title-icon">
+                    <i class="fa fa-heart" aria-hidden="true"></i>
+                </span>
+            </div>
+            <div class="ecom-model-close ecom-pull-right" (click)="closeSignInUpBox()">
+                <i class="fa fa-times" aria-hidden="true"></i>
+            </div>
+            <div class="ecom-clearfixed"></div>
+        </div>
+        <div class="ecom-model-body">
+            <div class="ecom-tabs">
+                <div class="tabs-btns">
+                    <ul>
+                        <li (click)="tabs($event)" data-target="signin" class="tabs-btn active">Sign-In</li>
+                        <li (click)="tabs($event)" data-target="signup" class="tabs-btn">Sign-Up</li>
+                    </ul>
+                </div>
+                <div id="signin" class="tabs-container ecom-text-center active">
+                    <div class="ecom-form">
+                        <div class="ecom-form-row">
+                            <div class="ecom-form-controls">
+                                <div class="ecom-form-icon-label ecom-size-20 ecom-size-lg-50">
+                                    <span class="ecom-form-icon">
+                                        <i class="fa fa-user" aria-hidden="true"></i>
+                                    </span>
+                                    <label class="ecom-form-label" for="userid">
+                                        E-mail ID :
+                                    </label>
+                                    <div class="ecom-clearfixed"></div>
+                                </div>
+                                <div>
+                                    <input class="ecom-form-control" name="userid" id="userid" type="text" placeholder="E-mail Address/Mobile number" data-required="true"
+                                    />
+                                    <div class="ecom-clearfixed"></div>
+                                </div>
+                                <div class="ecom-clearfixed"></div>
+                            </div>
+                        </div>
+                        <div class="ecom-form-row">
+                            <div class="ecom-form-controls">
+                                <div class="ecom-form-icon-label ecom-size-20 ecom-size-lg-50">
+                                    <span class="ecom-form-icon">
+                                        <i class="fa fa-lock" aria-hidden="true"></i>
+                                    </span>
+                                    <label class="ecom-form-label" for="password">
+                                        Password :
+                                    </label>
+                                    <div class="ecom-clearfixed"></div>
+                                </div>
+                                <div>
+                                    <input class="ecom-form-control" name="password" id="password" type="password" placeholder="Password" data-required="true"
+                                    />
+                                    <div class="ecom-clearfixed"></div>
+                                </div>
+                                <div class="ecom-clearfixed"></div>
+                            </div>
+                        </div>
+                        <div class="ecom-form-row">
+                            <div class="ecom-form-controls">
+
+                                <div class="ecom-size-lg-100">
+                                    <button type="button" class="sign-fb-g-btn">Sign-In with Facebook/Google</button>
+                                    <div class="ecom-clearfixed"></div>
+                                </div>
+                                <!-- <div class="ecom-form-icon-label ecom-size-20 ecom-size-lg-50">
+                                    <span class="ecom-form-icon">
+                                        <i class="fa fa-unlock" aria-hidden="true"></i>
+                                    </span>
+                                    <label class="ecom-form-label" for="sign-in">
+                                        Sign-In
+                                    </label>
+                                    <div class="ecom-clearfixed"></div>
+                                </div> -->
+                                <div class="ecom-size-lg-100">
+                                    <button type="button" class="sign-in-btn">
+                                        <i class="fa fa-unlock" aria-hidden="true"></i> Sign-In
+                                    </button>
+                                    <div class="ecom-clearfixed"></div>
+                                </div>
+                                <div class="ecom-clearfixed"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tabs-container ecom-text-center" id="signup">
+                    <div id="signupinfofill" class="ecom-form">
+                        <div class="ecom-form-row">
+                            <div class="ecom-form-controls">
+                                <div class="ecom-form-icon-label ecom-size-20 ecom-size-lg-50">
+                                    <span class="ecom-form-icon">
+                                        <i class="fa fa-user" aria-hidden="true"></i>
+                                    </span>
+                                    <label class="ecom-form-label" for="userid">
+                                        E-mail ID :
+                                    </label>
+                                    <div class="ecom-clearfixed"></div>
+                                </div>
+                                <div>
+                                    <input class="ecom-form-control" name="userid" id="userid" type="text" placeholder="E-mail Address" data-required="true"
+                                    />
+                                    <div class="ecom-clearfixed"></div>
+                                </div>
+                                <div class="ecom-clearfixed"></div>
+                            </div>
+                        </div>
+                        <div class="ecom-form-row">
+                            <div class="ecom-form-controls">
+                                <div class="ecom-form-icon-label ecom-size-20 ecom-size-lg-50">
+                                    <span class="ecom-form-icon">
+                                        <i class="fa fa-lock" aria-hidden="true"></i>
+                                    </span>
+                                    <label class="ecom-form-label" for="mobileno">
+                                        Mobile No. :
+                                    </label>
+                                    <div class="ecom-clearfixed"></div>
+                                </div>
+                                <div>
+                                    <input class="ecom-form-control" name="mobileno" id="mobileno" type="text" placeholder="Mobile Number" data-required="true"
+                                    />
+                                    <div class="ecom-clearfixed"></div>
+                                </div>
+                                <div class="ecom-clearfixed"></div>
+                            </div>
+                        </div>
+                        <div class="ecom-form-row">
+                            <div class="ecom-form-controls">
+                                <div class="ecom-form-icon-label ecom-size-20 ecom-size-lg-50">
+                                    <span class="ecom-form-icon">
+                                        <i class="fa fa-lock" aria-hidden="true"></i>
+                                    </span>
+                                    <label class="ecom-form-label" for="password">
+                                        Password :
+                                    </label>
+                                    <div class="ecom-clearfixed"></div>
+                                </div>
+                                <div>
+                                    <input class="ecom-form-control" name="password" id="password" type="password" placeholder="Password" data-required="true"
+                                    />
+                                    <div class="ecom-clearfixed"></div>
+                                </div>
+                                <div class="ecom-clearfixed"></div>
+                            </div>
+                        </div>
+                        <div class="ecom-form-row">
+                            <div class="ecom-form-controls">
+                                <div class="ecom-size-lg-100">
+                                    <button type="button" *ngIf="!isClickForVerifing" (click)="verify($event)" class="sign-up-btn">
+                                        <i class="fa fa-check" aria-hidden="true"></i> Next To Sign-Up
+                                    </button>
+                                    <button type="button" *ngIf="isVerifing" class="ecom-text-center sign-up-btn">
+                                        <i class="fa fa-spinner" aria-hidden="true"></i>
+                                    </button>
+
+                                    <div class="ecom-clearfixed"></div>
+                                </div>
+                                <div class="ecom-clearfixed"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="signupinfoconfirm" class="ecom-form ecom-hidden">
+                        <div class="ecom-form-row">
+                            <div class="ecom-form-controls">
+                                <div class="ecom-form-icon-label ecom-size-30 ecom-size-lg-50">
+                                    <span class="ecom-form-icon">
+                                        <i class="fa fa-lock" aria-hidden="true"></i>
+                                    </span>
+                                    <label class="ecom-form-label" for="confirmcode">
+                                        Confirm Code :
+                                    </label>
+                                    <div class="ecom-clearfixed"></div>
+                                </div>
+                                <div>
+                                    <input class="ecom-form-control" name="confirmcode" id="confirmcode" type="text" placeholder="Confirm Code" data-required="true"
+                                    />
+                                    <div class="ecom-clearfixed"></div>
+                                </div>
+                                <div class="ecom-clearfixed"></div>
+                            </div>
+                        </div>
+                        <div class="ecom-form-row">
+                            <div class="ecom-form-controls">
+                                <div class="ecom-size-lg-100">
+                                    <button type="button" *ngIf="!isCodeVerification" (click)="editforverify($event)" class="sign-up-confirm-btn">
+                                        <i class="fa fa-edit" aria-hidden="true"></i> Edit
+                                    </button>
+                                    <div class="ecom-clearfixed"></div>
+                                </div>
+                                <div class="ecom-size-lg-100">
+                                    <button type="button" *ngIf="!isCodeVerification" (click)="codeVerify($event)" class="sign-up-confirm-btn">
+                                        <i class="fa fa-check" aria-hidden="true"></i> Verify
+                                    </button>
+                                    <button type="button" *ngIf="!isCodeVerificationCancel" class="sign-up-confirm-btn ecom-text-center">
+                                            <i class="fa fa-spinner" aria-hidden="true"></i>
+                                    </button>
+                                    <div class="ecom-clearfixed"></div>
+                                </div>
+                                <div class="ecom-clearfixed"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ecom-model-footer">
+
+        </div>
+    </div>
+</div>
+
+<div class="ecom-model-overlay" (click)="closeSignInUpBox()"></div>

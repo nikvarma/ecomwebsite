@@ -1,0 +1,14 @@
+banner-box {    
+    .ecom-banner {
+        padding: 10px 0px;
+        width: 100%;
+        overflow: hidden;
+        .ecom-banner-container {
+            .ecom-banner-body {
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

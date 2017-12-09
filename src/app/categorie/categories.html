@@ -1,0 +1,121 @@
+<div class="ecom-row">
+    <div class="ecom-container">
+        <div class="ecom-left-filter ecom-pull-left">
+            <div class="ecom-filter">
+                <div class="ecom-filter-container" id="ecom-filter-container">
+                    <div class="ecom-filter-content">
+                        <div class="ecom-filter-header">
+                            <div class="ecom-filter-title">
+                                Brands
+                            </div>
+                            <div class="ecom-filter-close ecom-pull-right" (click)="expandCollapse($event)" data-target="#ecom-filter-body" id="ecom-filter-close">
+                                <i class="fa fa-plus" aria-hidden="true"></i>
+                            </div>
+                            <div class="ecom-clearfixed"></div>
+                        </div>
+                        <div class="ecom-filter-body" id="ecom-filter-body">
+                            <div class="ecom-filter-box">
+                                <ul>
+                                    <li id="li_dell_011010101001" class="inactive">
+                                        <input type="checkbox" (click)="filterSelected($event)" id="dell_011010101001" value="Dell" />
+                                        <span class="ecom-filter-text">Dell</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="ecom-filter-footer">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ecom-right-filter ecom-pull-left">
+            <div class="ecom-filter-container">
+                <div class="ecom-filter-content">
+                    <!-- <a href="./dell/3"> -->
+                    <div class="ecom-filter-header">
+
+                    </div>
+                    <div class="ecom-filter-body">
+                        <div class="ecom-box-details">
+                            <div class="ecom-box-silder-content">
+                                <div class="ecom-box-silder-header">
+                                    <div class="price-discount ecom-pull-left">
+                                        <span class="price-tag-off">
+                                            30% OFF
+                                        </span>
+                                    </div>
+                                    <div class="like-icon ecom-pull-right">
+                                        <i class="{{ userDetails.isUserLiked ? 'fa fa-heart' : 'fa fa-heart-o' }}" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="ecom-clearfixed"></div>
+                                </div>
+                                <div class="ecom-box-silder-body">
+                                    <div class="img-box">
+                                        <img src="assets/images/products-images/img-0.jpg" alt="" />
+                                    </div>
+                                </div>
+                                <div class="ecom-box-silder-footer">
+                                    <div class="footer-content">
+                                        <div class="product-name">
+                                            Dell Inspiron 3567 Notebook (6th Gen Intel Core i3- 4GB RAM- 1TB HDD- 39.62cm(15.6)- Ubuntu) (Black)
+                                        </div>
+                                        <div class="product-rating ecom-text-center">
+                                            <ul id="dell_100100100">
+                                                <li (click)="ratingProduct($event)" data-parentid="dell_100100100" data-value="1">
+                                                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                </li>
+                                                <li (click)="ratingProduct($event)" data-parentid="dell_100100100" data-value="2">
+                                                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                </li>
+                                                <li (click)="ratingProduct($event)" data-parentid="dell_100100100" class="active" data-value="3">
+                                                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                </li>
+                                                <li (click)="ratingProduct($event)" data-parentid="dell_100100100" data-value="4">
+                                                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                </li>
+                                                <li (click)="ratingProduct($event)" data-parentid="dell_100100100" data-value="5">
+                                                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                </li>
+                                                <li>
+                                                    <span>30</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="product-price-discount ecom-text-center">
+                                            <span class="product-addto-cart ecom-pull-left" data-target="" data-id="">
+                                                <i class="fa fa-plus" aria-hidden="true"></i>
+                                                <code>Add To Cart</code>
+                                            </span>
+                                            <span class="product-actual-price">
+                                                <span class="currency-type">Rs</span> 23,000
+                                            </span>
+                                            <span class="product-discount-price">
+                                                <span class="currency-type">Rs</span> 25,000
+                                            </span>
+                                            <span class="product-direct-buy ecom-pull-right">
+                                                <a routerLink="./nokia/2">
+                                                    <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                                                    <code>Buy</code>
+                                                </a>
+                                            </span>
+                                            <div class="ecom-clearfixed"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="ecom-clearfixed"></div>
+                    </div>
+                    <div class="ecom-filter-footer">
+
+                    </div>
+                    <!-- </a> -->
+                </div>
+            </div>
+        </div>
+        <div class="ecom-clearfixed"></div>
+    </div>
+</div>
